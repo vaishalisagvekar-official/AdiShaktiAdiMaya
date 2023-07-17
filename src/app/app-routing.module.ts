@@ -28,11 +28,10 @@ const routes: Routes = [
     path:'home-pre-login',
     component:HomePreLoginComponent
   },
-  {
-    path:'**',
-    component:PageNotFoundComponent
-
-  },
+  // {
+  //   path:'**',
+  //   component:PageNotFoundComponent
+  // },
 ];
 
 @NgModule({
