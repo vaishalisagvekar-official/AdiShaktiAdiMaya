@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    component:PageNotFoundComponent
+    component:HomePreLoginComponent
   },
 ];
 
