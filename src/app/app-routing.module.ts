@@ -8,6 +8,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo:'home-pre-login',
+    pathMatch:'full'
+  },
+  {
     path:'login',
     component:LoginComponent
   },
@@ -26,6 +31,7 @@ const routes: Routes = [
   {
     path:'**',
     component:PageNotFoundComponent
+
   },
 ];
 
