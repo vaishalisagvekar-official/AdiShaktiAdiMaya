@@ -1,0 +1,40 @@
+
+    <div class="mx-3">
+      <div class="form-wrapper container mt-4 shadow-lg p-5">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="POST">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              autocomplete="off"
+              [(ngModel)]="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              autocomplete="off"
+              [(ngModel)]="password"
+            />
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" (click)="login()">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  

@@ -1,0 +1,42 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Sr No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Experience</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of items; let i = index">
+    <tr *ngIf="pageName== 'HomePreLogin' && item.isApproved">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.name }}</td>
+      <td>{{ item.experience }}</td>
+      <td>
+        <button
+        *ngIf="!item.isApproved"
+          type="button"
+          class="btn btn-success"
+          (click)="approveItem(item._id)"
+        >
+          Approve
+        </button>
+      </td>
+    </tr>
+    <tr *ngIf="pageName== 'Home' && !item.isApproved">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.experience }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="approveItem(item._id)"
+          >
+            Approve
+          </button>
+        </td>
+      </tr>
+  </tbody>
+
+</table>

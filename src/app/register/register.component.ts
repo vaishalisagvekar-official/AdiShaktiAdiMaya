@@ -22,11 +22,12 @@ export class RegisterComponent {
       password: this.password,
     };
     this.http
-      .post('http://localhost:3000/user/create', bodyData, {
+        .post('http://16.16.56.66:80/api/createUser', bodyData, {
         responseType: 'text',
       })
       .subscribe((resultData: any) => {
         console.log(resultData);
+       
         alert('Registered Successfully');
 
         this.name, this.email, this.mobileNo, this.password;
