@@ -10,13 +10,13 @@ export class ExperienceListService {
    //get all experience list
   getAllItems(): Observable<any[]> {
     return this.http.get<any[]>(
-      'http://16.16.56.66:80/api/fetchExperienceData'
+      'https://192.168.78.91:8443/api/fetchExperienceData'
     );
   }
 
   // Update an experience item's "approved" status by ID
   approveItemById(itemId: string): Observable<any> {
-    const url = `http://16.16.56.66:80/api/approveExperience/${itemId}`;
+    const url = `https://192.168.78.91:8443/api/approveExperience/${itemId}`;
     return this.http.put<any>(url, {});
   }
 }

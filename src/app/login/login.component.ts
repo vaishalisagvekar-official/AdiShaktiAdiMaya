@@ -20,7 +20,7 @@ export class LoginComponent {
       password: this.password,
     };
     this.http
-      .post('http://16.16.56.66:80/api/userLogin', bodyData, {
+      .post('https://192.168.78.91:8443/api/userLogin', bodyData, {
         responseType: 'json',
       })
       .subscribe((resultData: any) => {

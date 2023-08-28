@@ -38,6 +38,6 @@ export class BannerComponent {
     const formData = new FormData();
     formData.append('image', imageFile);
 
-    return this.http.post<any>('http://localhost:3000/api/uploadBanner', formData);
+    return this.http.post<any>('https://192.168.78.91:8443/api/uploadBanner', formData);
   }
 }

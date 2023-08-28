@@ -22,7 +22,7 @@ export class RegisterComponent {
       password: this.password,
     };
     this.http
-        .post('http://16.16.56.66:80/api/createUser', bodyData, {
+        .post('https://192.168.78.91:8443/api/createUser', bodyData, {
         responseType: 'text',
       })
       .subscribe((resultData: any) => {
