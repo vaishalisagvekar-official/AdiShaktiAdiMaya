@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,15 +14,17 @@ export class LoginComponent {
   isLogin: boolean = true;
   errorMessage: String = '';
   constructor(private router: Router, private http: HttpClient) {}
+  requestOptions: Object = {
+    headers: new HttpHeaders().append('Content-Type', 'application/json'),
+    responseType: 'json',
+};
   login() {
     let bodyData = {
       email: this.email,
       password: this.password,
     };
     this.http
-      .post('https://adishaktiadimayabackend.in/api/userLogin', bodyData, {
-        responseType: 'json',
-      })
+      .post('https://adishaktiadimayabackend.in/api/userLogin', bodyData, this.requestOptions)
       .subscribe((resultData: any) => {
         if (resultData.status == 1) {
           this.router.navigateByUrl('/home');

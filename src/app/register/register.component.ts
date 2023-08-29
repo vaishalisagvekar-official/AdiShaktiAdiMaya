@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -13,6 +13,10 @@ export class RegisterComponent {
   password: string = '';
 
   constructor(private http: HttpClient) {}
+  requestOptions: Object = {
+    headers: new HttpHeaders().append('Content-Type', 'application/json'),
+    responseType: 'json',
+};
 
   register() {
     let bodyData = {
@@ -21,10 +25,9 @@ export class RegisterComponent {
       mobileNo: this.mobileNo,
       password: this.password,
     };
+   
     this.http
-        .post('https://adishaktiadimayabackend.in/api/createUser', bodyData, {
-        responseType: 'text',
-      })
+        .post('https://adishaktiadimayabackend.in/api/createUser', bodyData, this.requestOptions)
       .subscribe((resultData: any) => {
         console.log(resultData);
        
