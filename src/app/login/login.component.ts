@@ -20,7 +20,7 @@ export class LoginComponent {
       password: this.password,
     };
     this.http
-      .post('https://192.168.78.91:8443/api/userLogin', bodyData, {
+      .post('https://adishaktiadimayabackend.in/api/userLogin', bodyData, {
         responseType: 'json',
       })
       .subscribe((resultData: any) => {

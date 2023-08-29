@@ -22,7 +22,7 @@ export class RegisterComponent {
       password: this.password,
     };
     this.http
-        .post('https://192.168.78.91:8443/api/createUser', bodyData, {
+        .post('https://adishaktiadimayabackend.in/api/createUser', bodyData, {
         responseType: 'text',
       })
       .subscribe((resultData: any) => {

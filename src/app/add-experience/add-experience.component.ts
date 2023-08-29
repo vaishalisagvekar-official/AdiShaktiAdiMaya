@@ -16,7 +16,7 @@ export class ExperienceComponent {
       experience: this.experience,
     };
     this.http
-      .post('https://192.168.78.91:8443/api/createExperience', bodyData, {
+      .post('https://adishaktiadimayabackend.in/api/createExperience', bodyData, {
         responseType: 'text',
       })
       .subscribe((resultData: any) => {
