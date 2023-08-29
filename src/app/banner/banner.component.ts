@@ -14,30 +14,30 @@ export class BannerComponent {
     this.selectedImage = event.target.files[0];
   }
 
-  uploadImage() {
-    if (this.selectedImage) {
-      try {
-        this.uploadBannerImage(this.selectedImage).subscribe(
-          (response) => {
-            console.log('Image uploaded successfully');
-          },
+  // uploadImage() {
+  //   if (this.selectedImage) {
+  //     try {
+  //       this.uploadBannerImage(this.selectedImage).subscribe(
+  //         (response) => {
+  //           console.log('Image uploaded successfully');
+  //         },
 
-          (error) => {
-            console.error('Error uploading image', error);
-          }
-        );
-      } catch (error) {
-        console.log(error);
-      }
-    } else {
-      console.warn('No image selected.');
-    }
-  }
+  //         (error) => {
+  //           console.error('Error uploading image', error);
+  //         }
+  //       );
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   } else {
+  //     console.warn('No image selected.');
+  //   }
+  // }
 
-  uploadBannerImage(imageFile: File) {
-    const formData = new FormData();
-    formData.append('image', imageFile);
+  // uploadBannerImage(imageFile: File) {
+  //   const formData = new FormData();
+  //   formData.append('image', imageFile);
 
-    return this.http.post<any>('https://192.168.78.91:8443/api/uploadBanner', formData);
-  }
+  //   return this.http.post<any>('https://192.168.78.91:8443/api/uploadBanner', formData);
+  // }
 }
