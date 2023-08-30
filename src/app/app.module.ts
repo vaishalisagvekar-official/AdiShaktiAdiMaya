@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './add-experience/add-experience.component';
 import { BannerComponent } from './banner/banner.component';
 import { ExperienceListComponent } from './experience-list/experience-list.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ExperienceListComponent } from './experience-list/experience-list.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
