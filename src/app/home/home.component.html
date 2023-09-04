@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="">
-
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6 vh-100 bg-light">
-              <h2>News</h2>
-              <p>Some text.</p>
-            </div>
-            <div class="col-lg-6 vh-100 bg-light">
-              <img
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 vh-100 bg-light">
+            <h2>News</h2>
+            <p>Some text.</p>
+          </div>
+          <div class="col-lg-6 vh-100 bg-light">
+            <img
               class="d-block vh-100"
               src="assets/images/image1.jpg"
               alt="First slide"
             />
-            </div>
           </div>
         </div>
-      
-      </section>
-      <div class="container">
-        <div class="row">
-          <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
-          <a class="btn btn-primary" [routerLink]="['/add-experience']">Add Experience</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6">
+          <form>
+            <button
+              class="btn btn-primary btn-lg"
+              type="submit"
+              [routerLink]="['/register']"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6">
+          <form>
+            <button
+              class="btn btn-primary btn-lg"
+              type="submit"
+              [routerLink]="['/add-experience']"
+            >
+              Add Experience
+            </button>
+          </form>
         </div>
       </div>
-   
+    </div>
+
     <div class="carousel">
-        <!-- <div *ngFor="let image of images">
+      <!-- <div *ngFor="let image of images">
             <img [src]="getImageUrl(image.filename)" alt="Image">
           </div> -->
-      </div>
+    </div>
 
-      <app-experience-list *ngIf="isAdmin" [pageName]="pageName"></app-experience-list>
-</body>
+    <app-experience-list
+      *ngIf="isAdmin"
+      [pageName]="pageName"
+    ></app-experience-list>
+  </body>
+</html>
