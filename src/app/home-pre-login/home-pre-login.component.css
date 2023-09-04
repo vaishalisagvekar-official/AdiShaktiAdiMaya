@@ -1,4 +1,4 @@
- .carousel-control {
+ /* .carousel-control {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -13,10 +13,10 @@
     border: 0;
     opacity: .5;
     transition: opacity .15s ease;
-    /* font-size: 5.5rem; */
+
  }
     @media (min-width:900px){
     .coming-soon{
         font-size: 5.5rem !important;
     }
- }
+ } */
