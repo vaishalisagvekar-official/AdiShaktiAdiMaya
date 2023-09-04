@@ -26,9 +26,13 @@
         </div>
       
       </section>
-    <button type="button" class="btn btn-primary" [routerLink]="['/register']">Register</button>
-    <br>
-    <button type="button" class="btn btn-primary" [routerLink]="['/add-experience']">Add Experienc</button>
+      <div class="container">
+        <div class="row">
+          <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+          <a class="btn btn-primary" [routerLink]="['/add-experience']">Add Experience</a>
+        </div>
+      </div>
+   
     <div class="carousel">
         <!-- <div *ngFor="let image of images">
             <img [src]="getImageUrl(image.filename)" alt="Image">
