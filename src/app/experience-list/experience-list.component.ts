@@ -20,6 +20,7 @@ export class ExperienceListComponent implements OnInit {
 
   ngOnInit() {
     this.experienceListService.getAllItems().subscribe((response) => {
+      console.log(response);
       if (response) {
         this.items = response;
       }
