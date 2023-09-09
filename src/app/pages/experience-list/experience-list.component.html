@@ -1,0 +1,56 @@
+<div class="container  mt-4" >
+  <div class="container-fluid" *ngIf="!sessionStorageService.isAdmin(); else isAdminBlock">
+    <p-carousel
+    [value]="approvedExperiences"
+    [numVisible]="3"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-item pTemplate="item">
+      <div class="experience-card">
+        <div class="experience-cardm-content">
+          <div>
+            <b class="mb-1">{{ item.name }}</b>
+            <div>
+              {{ item.experience }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+  </div>
+
+  <ng-template #isAdminBlock>
+    <table class="table table-bordered" *ngIf="items">
+      <thead>
+        <tr>
+          <td scope="col">Sr.No.</td>
+          <td scope="col">Name</td>
+          <td scope="col">Experience</td>
+          <td scope="col"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let item of nonApprovedExperiences; let i = index">
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.experience }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn approve"
+                (click)="approveItem(item._id)"
+              >
+                Approve
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </ng-template>
+</div>
+
+

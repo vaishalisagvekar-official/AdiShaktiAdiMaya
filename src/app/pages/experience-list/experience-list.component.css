@@ -1,0 +1,33 @@
+.container {
+    background-color: rgba(var(--thirdThemeColor),var(--bs-text-opacity));
+}
+.approve {
+    background: var(--primaryThemeColor);
+    color: var(--secondaryThemeColor);
+}
+
+.table tr:hover {background-color: #D6EEEE;}
+.table td:hover {background-color: #D6EEEE;}
+
+table tr:hover td {
+    background-color: #FEFEFE;
+}
+
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+
+thead tr td{
+        --bs-bg-opacity: 1;
+        background-color: var(--primaryThemeColor);
+        --bs-text-opacity: 1;
+        color: rgba(var(--thirdThemeColor),var(--bs-text-opacity))!important;
+}
+
+.experience-card {
+    background-color: rgba(var(--secondaryThemeColor),var(--bs-text-opacity));
+    border: 1px solid var(--primaryThemeColor) !important;
+    height: 100%;
+    margin: 10px;
+    padding: 15px;
+}

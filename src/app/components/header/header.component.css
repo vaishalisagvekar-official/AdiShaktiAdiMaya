@@ -1,0 +1,11 @@
+.nav-link.active {
+    color: var(--secondaryThemeColor);
+}
+
+.navbar-brand {
+    color: var(--secondaryThemeColor);
+}
+
+.nav-link {
+    color: var(--primaryThemeColor);
+}

@@ -1,0 +1,17 @@
+.experiences-wrapper {
+
+}
+
+.admin-controls ul {
+    list-style-type: disclosure-closed;
+    color: var(--primaryThemeColor);
+}
+
+.admin-control-list li {
+    margin: auto;
+    padding: 10px;
+}
+
+.admin-control-list li a {
+    color: var(--thirdThemeColor);
+}

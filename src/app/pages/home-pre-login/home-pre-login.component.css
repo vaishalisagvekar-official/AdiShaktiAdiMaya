@@ -20,3 +20,13 @@
         font-size: 5.5rem !important;
     }
  } */
+
+ .banner-row {
+   background-image: linear-gradient(to left, black, yellow);
+ }
+
+ .banner-img {
+   height: auto;
+   width: 300px;
+   margin: auto;
+ }

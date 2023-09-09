@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { HomePreLoginComponent } from './home-pre-login/home-pre-login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ExperienceComponent } from './add-experience/add-experience.component';
-import { BannerComponent } from './banner/banner.component';
-import { ExperienceListComponent } from './experience-list/experience-list.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HomePreLoginComponent } from './pages/home-pre-login/home-pre-login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ExperienceComponent } from './pages/add-experience/add-experience.component';
+import { BannerComponent } from './pages/banner/banner.component';
+import { ExperienceListComponent } from './pages/experience-list/experience-list.component';
 import { authGuard } from './auth/auth.guard';
+import { AdminControlComponent } from './pages/admin-control/admin-control.component';
 
 const routes: Routes = [
   {
@@ -17,8 +18,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: 'home-pre-login',
+    component: HomePreLoginComponent
   },
   {
     path: 'register',
@@ -26,8 +27,8 @@ const routes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'home-pre-login',
-    component: HomePreLoginComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'home',
@@ -40,15 +41,20 @@ const routes: Routes = [
     canActivate: [authGuard]
   },
   {
+    path: 'list-experience',
+    component: ExperienceListComponent,
+    canActivate: [authGuard]
+  },
+  {
     path: 'add-banner',
     component: BannerComponent,
      canActivate: [authGuard]
   },
   {
-    path: 'list-experience',
-    component: ExperienceListComponent,
-    canActivate: [authGuard]
-  }
+    path: 'admin-control',
+    component: AdminControlComponent,
+     canActivate: [authGuard]
+  },
   // {
   //   path:'**',
   //   component:PageNotFoundComponent

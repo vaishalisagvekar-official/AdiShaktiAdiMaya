@@ -1,15 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './add-experience.component.html',
   styleUrls: ['./add-experience.component.css'],
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
   name: any;
   experience: any;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+
+    }
+
+  ngOnInit(): void {
+    
+  }
+
   submit() {
     let bodyData = {
       name: this.name,

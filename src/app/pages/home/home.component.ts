@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { SessionStorageService } from '../../services/storage/session-storage.service';
 
 interface Image {
   filename: string;
@@ -16,7 +17,8 @@ export class HomeComponent implements OnInit {
   pageName = 'Home';
   isAdmin = false;
   images: Image[] = [];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    public sessionStorageService: SessionStorageService) {}
 
   ngOnInit(): void {
     var userDetails: any = sessionStorage.getItem('userDetails');

@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomePreLoginComponent } from './home-pre-login/home-pre-login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomePreLoginComponent } from './pages/home-pre-login/home-pre-login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { ExperienceComponent } from './add-experience/add-experience.component';
-import { BannerComponent } from './banner/banner.component';
-import { ExperienceListComponent } from './experience-list/experience-list.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ExperienceComponent } from './pages/add-experience/add-experience.component';
+import { BannerComponent } from './pages/banner/banner.component';
+import { ExperienceListComponent } from './pages/experience-list/experience-list.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AdminControlComponent } from './pages/admin-control/admin-control.component';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomeComponent,
     ExperienceComponent,
     BannerComponent,
-    ExperienceListComponent
+    ExperienceListComponent,
+    AdminControlComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CarouselModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]

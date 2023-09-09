@@ -1,0 +1,53 @@
+<div *ngIf="sessionStorageService.isAdmin(); else customerContent">
+  <h5 class="mt-4 text-center">Hello Admin, <span>what you wish to do</span></h5>
+  <div class="admin-controls m-auto w-auto d-flex justify-content-center">
+    <ul class="admin-control-list">
+      <li ><a routerLink="/register">Add new user</a></li>
+      <li ><a routerLink="/list-experience"  [state]="{isAdmin: true}">Verify customer experiences</a></li>
+      <li ><a routerLink="/add-banner">Add new banner</a></li>
+      <li ><a routerLink="">Add News</a></li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #customerContent>
+
+  <!-- Add experience -->
+  <div class="container">
+    <div class="p-4">
+      <em>{{sessionStorageService.getUserName()}},</em> thank you for your trust. 
+      I hope we did a good job supporting you and guiding you through the process of healing. 
+      If so, would you consider sharing your experience so others can find us? You can do so here: 
+      <a routerLink="/add-experience">Share your Experience</a>.
+    </div>
+  </div>
+</ng-template>
+    
+    <!-- <section class="">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 vh-100 bg-light">
+            <h2>News</h2>
+            <p>Some text.</p>
+          </div>
+          <div class="col-lg-5 vh-100 bg-light">
+            <img
+              class="d-block vh-100"
+              src="assets/images/image1.jpg"
+              alt="First slide"
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+   
+
+    <div class="carousel">
+      <!-- <div *ngFor="let image of images">
+            <img [src]="getImageUrl(image.filename)" alt="Image">
+          </div> -->
+    </div>
+
+    
