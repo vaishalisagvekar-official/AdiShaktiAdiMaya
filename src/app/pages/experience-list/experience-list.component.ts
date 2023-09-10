@@ -18,17 +18,22 @@ export class ExperienceListComponent implements OnInit {
 
   responsiveOptions = [
     {
-        breakpoint: '1200',
+      breakpoint: '1400px',
+      numVisible: 3,
+      numScroll: 3
+  },
+    {
+        breakpoint: '1200px',
         numVisible: 3,
         numScroll: 3
     },
     {
-        breakpoint: '992',
+        breakpoint: '991px',
         numVisible: 2,
         numScroll: 2
     },
     {
-        breakpoint: '500',
+        breakpoint: '700px',
         numVisible: 1,
         numScroll: 1
     }

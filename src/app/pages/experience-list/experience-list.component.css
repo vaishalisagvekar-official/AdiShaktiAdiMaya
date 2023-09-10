@@ -25,9 +25,11 @@ thead tr td{
 }
 
 .experience-card {
-    background-color: rgba(var(--secondaryThemeColor),var(--bs-text-opacity));
-    border: 1px solid var(--primaryThemeColor) !important;
-    height: 100%;
-    margin: 10px;
-    padding: 15px;
+    /* background-color: rgba(var(--secondaryThemeColor),var(--bs-text-opacity)); */
+    /* background-color: white; */
+    /* border: 1px solid var(--primaryThemeColor) !important; */
+    min-height: 340px;
+    margin: 5px;
+    padding: 5px;
+    display: block;
 }

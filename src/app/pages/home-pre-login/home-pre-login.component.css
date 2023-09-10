@@ -36,7 +36,9 @@
    /* background: black; */
    /* background: url(../../../assets/images/stary_bg.png); */
    background: url(../../../assets/images/golden_stars.jpg);
+   /* background: url(../../../assets/images/lightening.mp4); */
    animation: animatedBackground 20s linear infinite alternate;
+   /* height: calc(100vh - 56px); */
  }
 
  .banner-img {
@@ -54,4 +56,21 @@
    width: fit-content;
    max-width: 100%;
    text-wrap: wrap;
+ }
+
+ #aboutUs {
+   background-image: url(../../../assets/images/golden_light.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
+ }
+
+ .about-us-content {
+   /* background-image: url(../../../assets/images/golden_light.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; */
+ }
+
+ #experiences {
+   background-image: linear-gradient(to right, #f79b3f , #ebeb3d);
  }

@@ -17,6 +17,7 @@ import { ExperienceListComponent } from './pages/experience-list/experience-list
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AdminControlComponent } from './pages/admin-control/admin-control.component';
 import { CarouselModule } from 'primeng/carousel';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CarouselModule } from 'primeng/carousel';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CarouselModule
+    CarouselModule,
+    CardModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]

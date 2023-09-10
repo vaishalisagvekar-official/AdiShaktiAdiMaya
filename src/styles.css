@@ -10,3 +10,24 @@ body {
     color: black;
 
 }
+
+a, button {
+    cursor: pointer;
+}
+
+.primaryThemebg {
+    background-color: var(--primaryThemeColor);
+}
+.primaryTheme {
+    color: var(--primaryThemeColor);
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button, .p-galleria .p-galleria-indicators .p-galleria-indicator.p-highlight button {
+    background-color: var(--fourthThemeColor) !important;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+}

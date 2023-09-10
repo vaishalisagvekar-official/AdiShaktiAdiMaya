@@ -1,13 +1,16 @@
-<div class="container  mt-4" >
+<div class="container  pt-4" >
   <div class="container-fluid" *ngIf="!sessionStorageService.isAdmin(); else isAdminBlock">
     <p-carousel
     [value]="approvedExperiences"
-    [numVisible]="3"
-    [numScroll]="1"
     [responsiveOptions]="responsiveOptions"
   >
     <ng-template let-item pTemplate="item">
-      <div class="experience-card">
+      <p-card header="{{item.name}}" class="experience-card" >
+        <p class="m-0">
+          {{ item.experience }}
+        </p>
+    </p-card>
+      <!-- <div class="experience-card">
         <div class="experience-cardm-content">
           <div>
             <b class="mb-1">{{ item.name }}</b>
@@ -16,7 +19,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </ng-template>
   </p-carousel>
   </div>
