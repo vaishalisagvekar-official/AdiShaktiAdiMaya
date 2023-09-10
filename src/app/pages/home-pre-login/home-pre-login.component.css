@@ -21,12 +21,37 @@
     }
  } */
 
+ @keyframes animatedBackground {
+   from {
+     background-position: 0 0;
+   }
+   to {
+     background-position: 100% 0;
+   }
+ }
+
  .banner-row {
-   background-image: linear-gradient(to left, black, yellow);
+   /* background-image: linear-gradient(to left, black, yellow); */
+   /* background-image: url(../../../assets/images/vaastu.jpg); */
+   /* background: black; */
+   /* background: url(../../../assets/images/stary_bg.png); */
+   background: url(../../../assets/images/golden_stars.jpg);
+   animation: animatedBackground 20s linear infinite alternate;
  }
 
  .banner-img {
    height: auto;
    width: 300px;
    margin: auto;
+ }
+
+ .news-heading {
+   color: var(--fourthThemeColor);
+ }
+
+ .news {
+   color: var(--primaryThemeColor);
+   width: fit-content;
+   max-width: 100%;
+   text-wrap: wrap;
  }

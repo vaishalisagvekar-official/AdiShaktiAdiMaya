@@ -3,6 +3,7 @@
     --primaryThemeColor: rgb(225, 225, 108);
     --secondaryThemeColor: white;
     --thirdThemeColor: black;
+    --fourthThemeColor: #ff7c00;
 }
 body {
     /* background-color: var(--primaryThemeColor); */
