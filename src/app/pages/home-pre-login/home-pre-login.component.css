@@ -59,10 +59,11 @@
  }
 
  #aboutUs {
-   background-image: url(../../../assets/images/golden_light.jpg);
+   /* background-image: url(../../../assets/images/golden_light.jpg); */
    background-repeat: no-repeat;
    background-size: cover;
    /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
+   background-image: linear-gradient(to right, #3f47f7 , #885131);
  }
 
  .about-us-content {
@@ -72,5 +73,6 @@
  }
 
  #experiences {
-   background-image: linear-gradient(to right, #f79b3f , #ebeb3d);
+   /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
+   background-image: linear-gradient(to right, #f79b3f , #ce68d7);
  }
