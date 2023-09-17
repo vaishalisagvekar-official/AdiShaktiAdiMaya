@@ -35,10 +35,11 @@
    /* background-image: url(../../../assets/images/vaastu.jpg); */
    /* background: black; */
    /* background: url(../../../assets/images/stary_bg.png); */
-   background: url(../../../assets/images/golden_stars.jpg);
+   /* background: url(../../../assets/images/golden_stars.jpg); */
    /* background: url(../../../assets/images/lightening.mp4); */
-   animation: animatedBackground 20s linear infinite alternate;
+   /* animation: animatedBackground 20s linear infinite alternate; */
    /* height: calc(100vh - 56px); */
+   /* padding: 50px 0; */
  }
 
  .banner-img {
@@ -48,22 +49,35 @@
  }
 
  .news-heading {
-   color: var(--fourthThemeColor);
+   /* color: var(--fourthThemeColor); */
+   color: #dc3545;;
  }
 
  .news {
-   color: var(--primaryThemeColor);
+   /* color: var(--primaryThemeColor);
    width: fit-content;
    max-width: 100%;
-   text-wrap: wrap;
+   text-wrap: wrap; */
+   width: fit-content;
+    max-width: 100%;
+    text-wrap: wrap;
+    color: red;
+    font-size: 15px;
  }
 
  #aboutUs {
    /* background-image: url(../../../assets/images/golden_light.jpg); */
-   background-repeat: no-repeat;
-   background-size: cover;
+   /* background-repeat: no-repeat;
+   background-size: cover; */
    /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
-   background-image: linear-gradient(to right, #3f47f7 , #885131);
+   /* background-image: linear-gradient(to right, #3f47f7 , #885131); */
+   background: white;
+ }
+
+ #home .row,
+ #aboutUs,
+ #courses, #experiences {
+  padding: 50px 0;
  }
 
  .about-us-content {
@@ -74,5 +88,6 @@
 
  #experiences {
    /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
-   background-image: linear-gradient(to right, #f79b3f , #ce68d7);
+   /* background-image: linear-gradient(to right, #f79b3f , #ce68d7); */
+   background-image: linear-gradient(to right, #e4e88b , #94d768);
  }

@@ -13,11 +13,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/add-experience/add-experience.component';
 import { BannerComponent } from './pages/banner/banner.component';
-import { ExperienceListComponent } from './pages/experience-list/experience-list.component';
+import { ExperienceListComponent } from './components/experience-list/experience-list.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AdminControlComponent } from './pages/admin-control/admin-control.component';
 import { CarouselModule } from 'primeng/carousel';
 import { CardModule } from 'primeng/card';
+import { CoursesComponent } from './components/courses/courses.component';
+import { CourseComponent } from './components/course/course.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CardModule } from 'primeng/card';
     ExperienceComponent,
     BannerComponent,
     ExperienceListComponent,
-    AdminControlComponent
+    AdminControlComponent,
+    CoursesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { HomePreLoginComponent } from './pages/home-pre-login/home-pre-login.com
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ExperienceComponent } from './pages/add-experience/add-experience.component';
 import { BannerComponent } from './pages/banner/banner.component';
-import { ExperienceListComponent } from './pages/experience-list/experience-list.component';
+import { ExperienceListComponent } from './components/experience-list/experience-list.component';
 import { authGuard } from './auth/auth.guard';
 import { AdminControlComponent } from './pages/admin-control/admin-control.component';
 

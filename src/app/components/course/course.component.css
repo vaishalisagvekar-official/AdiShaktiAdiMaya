@@ -1,0 +1,7 @@
+.p-card .p-component{
+    width: 100% !important;
+}
+p-card {
+    width: 100% !important;
+    display: flex;
+}

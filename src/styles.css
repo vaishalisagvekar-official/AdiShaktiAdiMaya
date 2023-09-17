@@ -7,6 +7,7 @@
 }
 body {
     /* background-color: var(--primaryThemeColor); */
+    /* background-image: linear-gradient(to bottom, orange, yellow, white 50%) !important;; */
     color: black;
 
 }
@@ -16,10 +17,18 @@ a, button {
 }
 
 .primaryThemebg {
-    background-color: var(--primaryThemeColor);
+    /* background-color: var(--primaryThemeColor); */
+    /* background-color: linear-gradient(to bottom, orange, yellow, white 50%) !important;; */
+    color: white;
+    background-color: #ff4a00;;
 }
 .primaryTheme {
     color: var(--primaryThemeColor);
+    color: #ff4a00;;
+}
+
+.whiteBg{
+    background: white !important;
 }
 
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button, .p-galleria .p-galleria-indicators .p-galleria-indicator.p-highlight button {
@@ -30,4 +39,30 @@ a, button {
     width: 12px !important;
     height: 12px !important;
     border-radius: 50% !important;
+}
+
+.p-card .p-component{
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        background-color: white !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+        width: min-content;
+    }
+
+    app-course {
+        width: auto;
+    }
+
+    .p-carousel .p-carousel-content .p-carousel-prev, 
+    .p-carousel .p-carousel-content .p-carousel-next {
+        display: none;
+    }
 }

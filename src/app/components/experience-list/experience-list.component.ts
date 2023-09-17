@@ -20,22 +20,26 @@ export class ExperienceListComponent implements OnInit {
     {
       breakpoint: '1400px',
       numVisible: 3,
-      numScroll: 3
+      numScroll: 3,
+      autoPlayInterval: 1000
   },
     {
         breakpoint: '1200px',
         numVisible: 3,
-        numScroll: 3
+        numScroll: 3,
+        autoPlayInterval: 1000
     },
     {
         breakpoint: '991px',
         numVisible: 2,
-        numScroll: 2
+        numScroll: 2,
+        autoPlayInterval: 1000
     },
     {
         breakpoint: '700px',
         numVisible: 1,
-        numScroll: 1
+        numScroll: 1,
+        autoPlayInterval: 1000
     }
 ];
 

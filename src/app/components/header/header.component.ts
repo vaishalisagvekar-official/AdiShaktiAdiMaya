@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionStorageService } from '../../services/storage/session-storage.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-header',
@@ -8,10 +10,13 @@ import { SessionStorageService } from '../../services/storage/session-storage.se
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  isLogin: any;
 
+  isLogin: any;
+  
   constructor(public router: Router,
-    public sessionStorageService: SessionStorageService) {}
+    public sessionStorageService: SessionStorageService) {
+      
+    }
 
   ngOnInit() {
     this.isLogin = sessionStorage.getItem('isLogin');
@@ -29,6 +34,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.removeSessionData()
     this.router.navigate(['/home-pre-login']);
+    this.isLogin = false;
   }
 
   removeSessionData(){

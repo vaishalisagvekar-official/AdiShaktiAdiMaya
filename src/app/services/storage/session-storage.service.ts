@@ -18,4 +18,7 @@ export class SessionStorageService {
     return this.getUser()?.name;
   }
   
+  getIsLogin(){
+    return sessionStorage.getItem("isLogin") == "true" ? true : false ;
+  }
 }

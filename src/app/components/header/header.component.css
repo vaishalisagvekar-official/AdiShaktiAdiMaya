@@ -1,11 +1,28 @@
-.nav-link.active {
-    color: var(--fourthThemeColor);
+.nav-link.active, a:visited:active  {
+    /* color: var(--fourthThemeColor); */
+    color: red;
+    font-weight: 600;
 }
 
 .navbar-brand {
-    color: var(--secondaryThemeColor);
+    /* color: var(--secondaryThemeColor); */
+    color: #ff4a00;
+    font-weight: 500;
 }
 
 .nav-link {
-    color: var(--primaryThemeColor);
+    /* color: var(--primaryThemeColor); */
+    color: #ff7c00;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.container-fluid {
+    background: transparent;
+}
+
+ul {
+    margin-right: 50px;
 }

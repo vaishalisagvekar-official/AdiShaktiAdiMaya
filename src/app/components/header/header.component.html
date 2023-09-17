@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="assets/images/image1.jpg" alt="" width="30" height="24" />
+      <img src="assets/images/vaastu_5.png" alt="" width="50" height="50" />
       Adhi Shakti Adhi Maya</a
     >
     <button
@@ -34,17 +34,17 @@
           <a class="nav-link" routerLinkActive="active" href="#aboutUs">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">Service</a>
+          <a class="nav-link" routerLinkActive="active" href="#courses">Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">Contact</a>
+          <a class="nav-link" routerLinkActive="active" href="#contactUs">Contact</a>
         </li>
-        <li class="nav-item" *ngIf="!isLogin">
+        <li class="nav-item" *ngIf="!sessionStorageService.getIsLogin()">
           <a class="nav-link" routerLinkActive="active" [routerLink]="'login'"
             >Login</a
           >
         </li>
-        <li class="nav-item" *ngIf="isLogin">
+        <li class="nav-item" *ngIf="sessionStorageService.getIsLogin()">
           <a class="nav-link" routerLinkActive="active" (click)="logout()"
             >Logout</a
           >
