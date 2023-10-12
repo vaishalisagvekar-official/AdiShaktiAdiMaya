@@ -15,3 +15,11 @@
 .admin-control-list li a {
     color: var(--thirdThemeColor);
 }
+
+#welcome-user{
+    padding: 50px 0;
+}
+
+.userName{
+    font-size: 25px;
+}

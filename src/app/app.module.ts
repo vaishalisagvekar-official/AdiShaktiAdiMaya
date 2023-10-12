@@ -20,6 +20,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { CardModule } from 'primeng/card';
 import { CoursesComponent } from './components/courses/courses.component';
 import { CourseComponent } from './components/course/course.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CourseComponent } from './components/course/course.component';
     ExperienceListComponent,
     AdminControlComponent,
     CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

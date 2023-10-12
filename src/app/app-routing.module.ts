@@ -22,7 +22,7 @@ const routes: Routes = [
     component: HomePreLoginComponent
   },
   {
-    path: 'register',
+    path: 'add-new-user',
     component: RegisterComponent,
     canActivate: [authGuard]
   },

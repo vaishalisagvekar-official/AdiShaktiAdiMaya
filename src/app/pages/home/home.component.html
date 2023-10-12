@@ -1,10 +1,10 @@
-<div *ngIf="sessionStorageService.isAdmin(); else customerContent">
+<div class="scrollLink" *ngIf="sessionStorageService.isAdmin(); else customerContent">
   <h5 class="mt-4 text-center">
     Hello Admin, <span>what you wish to do</span>
   </h5>
   <div class="admin-controls m-auto w-auto d-flex justify-content-center">
     <ul class="admin-control-list">
-      <li><a routerLink="/register">Add new user</a></li>
+      <li><a routerLink="/add-new-user">Add new user</a></li>
       <li>
         <a routerLink="/list-experience" [state]="{ isAdmin: true }"
           >Verify customer experiences</a
@@ -16,22 +16,32 @@
   </div>
 </div>
 
-<ng-template #customerContent>
+<ng-template class="scrollLink" #customerContent>
   <!-- Add experience -->
-  <div class="container">
+  <div class="container text-center" id="welcome-user">
     <div class="p-4">
-      <em>{{ sessionStorageService.getUserName() }},</em> thank you for your
+      <em class="gradient-theme userName">Dear {{ sessionStorageService.getUserName() }},</em><br><br> thank you for your
       trust. I hope we did a good job supporting you and guiding you through the
       process of healing. If so, would you consider sharing your experience so
       others can find us? You can do so here:
-      <a routerLink="/add-experience">Share your Experience</a>.
+      <br><br><a routerLink="/add-experience">Share your Experience</a>.
     </div>
   </div>
 </ng-template>
 
-<div id="courses">
-  <app-courses></app-courses>
+<app-about-us class="scrollLink" *ngIf="!sessionStorageService.isAdmin()"></app-about-us>
+
+<app-courses class="scrollLink" *ngIf="!sessionStorageService.isAdmin()"></app-courses>
+
+<div class="scrollLink" *ngIf="!sessionStorageService.isAdmin()" id="experiences">
+  <h4 class="primaryTheme text-center">
+    Check what our customer says about us
+  </h4>
+  <app-experience-list [pageName]="pageName"></app-experience-list>
 </div>
+
+<div class="scrollLink" id="contactUs"></div>
+
 <!-- <section class="">
       <div class="container-fluid">
         <div class="row">
@@ -55,3 +65,4 @@
             <img [src]="getImageUrl(image.filename)" alt="Image">
           </div> -->
 </div>
+

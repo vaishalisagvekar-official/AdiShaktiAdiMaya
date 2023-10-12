@@ -5,6 +5,9 @@
     --thirdThemeColor: black;
     --fourthThemeColor: #ff7c00;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     /* background-color: var(--primaryThemeColor); */
     /* background-image: linear-gradient(to bottom, orange, yellow, white 50%) !important;; */
@@ -66,3 +69,20 @@ a, button {
         display: none;
     }
 }
+
+.gradient-theme {
+    font-weight: 500;
+    background: -webkit-linear-gradient(yellow, #fd6200, #ff1f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#experiences {
+    padding: 50px 0;
+   }
+
+#experiences {
+    /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
+    /* background-image: linear-gradient(to right, #f79b3f , #ce68d7); */
+    background-image: linear-gradient(to right, #e4e88b , #94d768);
+  }

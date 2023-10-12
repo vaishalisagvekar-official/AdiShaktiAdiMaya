@@ -50,7 +50,10 @@
 
  .news-heading {
    /* color: var(--fourthThemeColor); */
-   color: #dc3545;;
+   /* color: #dc3545; */
+   /* background: -webkit-linear-gradient(yellow, #fd6200, #ff1f00);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; */
  }
 
  .news {
@@ -76,7 +79,7 @@
 
  #home .row,
  #aboutUs,
- #courses, #experiences {
+ #courses {
   padding: 50px 0;
  }
 
@@ -84,10 +87,4 @@
    /* background-image: url(../../../assets/images/golden_light.jpg);
    background-repeat: no-repeat;
    background-size: cover; */
- }
-
- #experiences {
-   /* background-image: linear-gradient(to right, #f79b3f , #ebeb3d); */
-   /* background-image: linear-gradient(to right, #f79b3f , #ce68d7); */
-   background-image: linear-gradient(to right, #e4e88b , #94d768);
  }

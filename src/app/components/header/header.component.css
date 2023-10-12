@@ -6,8 +6,12 @@
 
 .navbar-brand {
     /* color: var(--secondaryThemeColor); */
-    color: #ff4a00;
-    font-weight: 500;
+    /* color: #ff4a00; */
+    /* font-weight: 500;
+    background: -webkit-linear-gradient(yellow, #fd6200, #ff1f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 20px;
 }
 
 .nav-link {
