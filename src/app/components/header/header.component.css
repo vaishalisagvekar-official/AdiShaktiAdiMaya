@@ -4,6 +4,11 @@
     font-weight: 600;
 }
 
+a:link:active, a:visited, a:visited:active {
+    color: red;
+    font-weight: 600;
+}
+
 .navbar-brand {
     /* color: var(--secondaryThemeColor); */
     /* color: #ff4a00; */

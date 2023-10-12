@@ -1,4 +1,4 @@
-#aboutUs {
+#content {
     /* background-image: url(../../../assets/images/golden_light.jpg); */
     /* background-repeat: no-repeat;
     background-size: cover; */
@@ -7,6 +7,6 @@
     background: white;
   }
  
-  #aboutUs{
+  #content{
    padding: 50px 0;
   }
