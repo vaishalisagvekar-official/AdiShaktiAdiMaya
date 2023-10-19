@@ -86,3 +86,11 @@ a, button {
     /* background-image: linear-gradient(to right, #f79b3f , #ce68d7); */
     background-image: linear-gradient(to right, #e4e88b , #94d768);
 }
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: url('./assets/images/loader.gif') no-repeat center center rgba(0, 0, 0, 0.25)
+}
