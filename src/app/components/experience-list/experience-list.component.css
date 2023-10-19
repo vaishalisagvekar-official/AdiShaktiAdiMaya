@@ -1,6 +1,12 @@
 .container {
     background-color: rgba(var(--thirdThemeColor),var(--bs-text-opacity));
 }
+@media only screen and (max-width: 768px) {
+    .container {
+        width: auto;
+        margin: auto 15px;
+    }
+}
 .approve {
     background: var(--primaryThemeColor);
     color: var(--secondaryThemeColor);

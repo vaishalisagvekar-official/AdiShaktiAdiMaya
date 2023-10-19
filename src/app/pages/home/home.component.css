@@ -2,6 +2,12 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        width: auto;
+        margin: auto 15px;
+    }
+}
 .admin-controls ul {
     list-style-type: disclosure-closed;
     color: var(--primaryThemeColor);
