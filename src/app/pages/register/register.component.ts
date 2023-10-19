@@ -25,7 +25,20 @@ export class RegisterComponent {
    
     this.apiService.makePostAPI('createUser', bodyData).subscribe((response => {
       console.log(response);
-      alert('Registered Successfully');
+      if (response?.status == 1) {
+        alert('New user added successfully!!');
+        this.resetForm();
+      } else {
+        alert("Failed to add new user. Please try after sometime.")
+      }
+      
     }));
+  }
+
+  resetForm(){
+    this.name = "";
+    this.email = "";
+    this.mobileNo = "";
+    this.password = "";
   }
 }

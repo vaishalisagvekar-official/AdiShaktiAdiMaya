@@ -20,8 +20,10 @@ export class ExperienceComponent {
       console.log(response);
       if (response.status == 1) {
         alert('Thank you for sharing your experience!!');
+        this.name = "";
+        this.experience = "";
       } else {
-        alert('Failed to add your experience!! Please try after sometime.');
+        alert('Failed to add your experience. Please try after sometime.');
       }
     }));
   }

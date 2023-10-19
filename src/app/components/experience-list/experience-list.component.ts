@@ -11,7 +11,6 @@ import { SessionStorageService } from '../../services/storage/session-storage.se
 })
 export class ExperienceListComponent implements OnInit {
   @Input() pageName: any;
-  isShow = false
   items: any[] = [];
   approvedExperiences: any[] = [];
   nonApprovedExperiences: any[] = [];
@@ -49,11 +48,11 @@ export class ExperienceListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.sessionStorageService.isAdmin());
-    
-    this.experienceListService.getAllItems().subscribe((response: any) => {
-      console.log(response);
-      
+    this.getAllExperience();
+  }
+
+  getAllExperience(){
+    this.experienceListService.getAllItems().subscribe((response: any) => {      
       if (response?.status == 1) {
         if (Array.isArray(response.data)) {
           this.items = response?.data;
@@ -70,7 +69,7 @@ export class ExperienceListComponent implements OnInit {
     this.experienceListService.approveItemById(itemId).subscribe((response: any) => {
       if (response?.status == 1) {
         if(response?.data?.isApproved == true){
-          this.isShow == false
+          this.getAllExperience();
         }
       } else {
         alert("Failed to approve experience. Please try after sometime")
