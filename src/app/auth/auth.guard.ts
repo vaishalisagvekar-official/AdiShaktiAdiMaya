@@ -13,7 +13,7 @@ export class authGuard {
     if (this.isLoggedIn()) {
       return true;
     } else {
-      this.router.navigate(['HomePreLogin']);
+      this.router.navigate(['home-pre-login']);
       return false;
     }
   }

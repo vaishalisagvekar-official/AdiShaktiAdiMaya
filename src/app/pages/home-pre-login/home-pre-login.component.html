@@ -22,42 +22,46 @@
       <span class="sr-only">Next</span>
     </a> -->
 
-<div class="container-fluid scrollLink" id="home">
-  <div class="row banner-row">
-    <!-- <video id="background-video" autoplay loop muted poster="assets/images/vaastu_1.jpg"><source src="../../../assets/images/lightening.mp4" type="video/mp4"></video> -->
-    <!-- <img
+<div data-spy="scroll" data-target="#navbar" data-offset="0" id="whole">
+  <div class="container-fluid scrollLink" id="home">
+    <div class="row banner-row">
+      <!-- <video id="background-video" autoplay loop muted poster="assets/images/vaastu_1.jpg"><source src="../../../assets/images/lightening.mp4" type="video/mp4"></video> -->
+      <!-- <img
+            class="d-block banner-img"
+            src="assets/images/vaastu_1.jpg"
+            alt="First slide"
+          /> -->
+      <div class="col-lg-6 m-auto pt-4 text-center">
+        <h4 class="gradient-theme">
+          She the refuge, peaceful and merciful undoubtedly
+        </h4>
+        <br />
+        <pre
+          class="news m-auto text-center"
+        >Maa Durga ka sada rahe ashirvad<br>dhan, samridhi, sukh aur kamiyabi ka de aapko aashirvad<br>Navrati ki nau raatein roshan kar dein aapka Jeevan<br>Navratri ki shubh kamnayein</pre>
+      </div>
+      <div class="col-lg-6">
+        <img
           class="d-block banner-img"
-          src="assets/images/vaastu_1.jpg"
+          src="assets/images/vaastu_5.png"
           alt="First slide"
-        /> -->
-    <div class="col-lg-6 m-auto pt-4 text-center">
-      <h4 class="gradient-theme">
-        She the refuge, peaceful and merciful undoubtedly
-      </h4>
-      <br />
-      <pre
-        class="news m-auto text-center"
-      >Maa Durga ka sada rahe ashirvad<br>dhan, samridhi, sukh aur kamiyabi ka de aapko aashirvad<br>Navrati ki nau raatein roshan kar dein aapka Jeevan<br>Navratri ki shubh kamnayein</pre>
-    </div>
-    <div class="col-lg-6">
-      <img
-        class="d-block banner-img"
-        src="assets/images/vaastu_5.png"
-        alt="First slide"
-      />
+        />
+      </div>
     </div>
   </div>
+  
+  <app-about-us class="scrollLink" id="aboutUs"></app-about-us>
+  
+  <app-courses class="scrollLink"></app-courses>
+  
+  <div class="scrollLink" id="experiences">
+    <h4 class="primaryTheme text-center">
+      Check what our customer says about us
+    </h4>
+    <app-experience-list [pageName]="pageName"></app-experience-list>
+  </div>
+  
+  <div class="scrollLink" id="contactUs"></div>
 </div>
 
-<app-about-us class="scrollLink" id="aboutUs"></app-about-us>
 
-<app-courses class="scrollLink"></app-courses>
-
-<div class="scrollLink" id="experiences">
-  <h4 class="primaryTheme text-center">
-    Check what our customer says about us
-  </h4>
-  <app-experience-list [pageName]="pageName"></app-experience-list>
-</div>
-
-<div class="scrollLink" id="contactUs"></div>

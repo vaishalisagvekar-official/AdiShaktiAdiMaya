@@ -5,6 +5,9 @@
 .admin-controls ul {
     list-style-type: disclosure-closed;
     color: var(--primaryThemeColor);
+    border: 1px solid #ffa700;
+    border-radius: 10px;
+    padding: 40px 40px 40px 70px;
 }
 
 .admin-control-list li {
@@ -22,4 +25,8 @@
 
 .userName{
     font-size: 25px;
+}
+
+.heading {
+    color: red;
 }

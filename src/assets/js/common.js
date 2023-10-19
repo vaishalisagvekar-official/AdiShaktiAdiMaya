@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     );
   });
 
+  $(document).ready(function () {
+    $(".navbar-nav li a").click(function(event) {
+      $(".navbar-collapse").collapse('hide');
+    });
+  });
+
+  $('#whole').scrollspy({ target: '#navbar' })
   // $(".scrollLink").click(function(event) {
   //   event.preventDefault();
   //   $("html, body").animate({
