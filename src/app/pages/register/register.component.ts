@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -13,11 +13,7 @@ export class RegisterComponent {
   mobileNo: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient, private apiService: ApiService) {}
-  requestOptions: Object = {
-    headers: new HttpHeaders().append('Content-Type', 'application/json'),
-    responseType: 'json',
-};
+  constructor(private apiService: ApiService) {}
 
   register() {
     let bodyData = {
@@ -27,19 +23,9 @@ export class RegisterComponent {
       password: this.password,
     };
    
-    // this.apiService.makePostAPI('createUser', bodyData).subscribe((response => {
-    //   console.log(response);
-    //   alert('Registered Successfully');
-    // }));
-
-    this.http
-        .post('https://adishaktiadimayabackend.in/api/createUser', bodyData, this.requestOptions)
-      .subscribe((resultData: any) => {
-        console.log(resultData);
-       
-        alert('Registered Successfully');
-
-        this.name, this.email, this.mobileNo, this.password;
-      });
+    this.apiService.makePostAPI('createUser', bodyData).subscribe((response => {
+      console.log(response);
+      alert('Registered Successfully');
+    }));
   }
 }

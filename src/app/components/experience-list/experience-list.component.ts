@@ -44,7 +44,6 @@ export class ExperienceListComponent implements OnInit {
 ];
 
   constructor(
-    private http: HttpClient,
     public experienceListService: ExperienceListService,
     public sessionStorageService: SessionStorageService
   ) {}

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
@@ -36,19 +36,5 @@ export class LoginComponent {
         alert('Incorrect email or password');
       }
     }));
-
-    // this.http
-    //   .post('https://adishaktiadimayabackend.in/api/userLogin', bodyData, this.requestOptions)
-    //   .subscribe((resultData: any) => {
-    //     if (resultData.status == 1) {
-    //       this.router.navigateByUrl('/home');
-    //       const login: any = this.isLogin;
-    //       sessionStorage.setItem('isLogin', login);
-    //       var userData = JSON.stringify(resultData.data);
-    //       sessionStorage.setItem('userDetails', userData);
-    //     } else {
-    //       alert('Incorrect email or password');
-    //     }
-    //   });
   }
 }

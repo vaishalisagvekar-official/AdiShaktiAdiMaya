@@ -1,22 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExperienceListService {
-  constructor(private http: HttpClient) {}
+  constructor(private apiService: ApiService) {}
    //get all experience list
   getAllItems(): Observable<any[]> {
-    return this.http.get<any[]>(
-      'https://adishaktiadimayabackend.in/api/fetchExperienceData'
-    );
+    return this.apiService.makeGetAPI('fetchExperienceData');
   }
 
   // Update an experience item's "approved" status by ID
   approveItemById(itemId: string): Observable<any> {
-    const url = `https://adishaktiadimayabackend.in/api/approveExperience/${itemId}`;
-    return this.http.put<any>(url, {});
+    return this.apiService.makePutAPI(`approveExperience/${itemId}`, {});
   }
 }

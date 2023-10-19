@@ -22,7 +22,11 @@ export class ApiService {
     return this.http.post(this.baseAPI + endPoint, body, this.requestOptions);
   }
 
-  makeGetAPI(){
+  makeGetAPI(endPoint:string){
+    return this.http.get<any>(this.baseAPI + endPoint, this.requestOptions);
+  }
 
+  makePutAPI(endPoint:string, body: any): Observable<any>{
+    return this.http.put(this.baseAPI + endPoint, body, this.requestOptions);
   }
 }

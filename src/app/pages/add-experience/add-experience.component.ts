@@ -1,36 +1,24 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './add-experience.component.html',
   styleUrls: ['./add-experience.component.css'],
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   name: any;
   experience: any;
-  constructor(private http: HttpClient) {
-
-    }
-
-  ngOnInit(): void {
-    
-  }
+  constructor(private apiService: ApiService) {}
 
   submit() {
     let bodyData = {
       name: this.name,
       experience: this.experience,
     };
-    this.http
-      .post('https://adishaktiadimayabackend.in/api/createExperience', bodyData, {
-        responseType: 'text',
-      })
-      .subscribe((resultData: any) => {
-        console.log(resultData);
-        alert('Data Saved Successfully');
-
-        this.name, this.experience;
-      });
+    this.apiService.makePostAPI('createExperience', bodyData).subscribe((response => {
+      console.log(response);
+      alert('New User Added Successfully');
+    }));
   }
 }
