@@ -18,7 +18,11 @@ export class ExperienceComponent {
     };
     this.apiService.makePostAPI('createExperience', bodyData).subscribe((response => {
       console.log(response);
-      alert('New User Added Successfully');
+      if (response.status == 1) {
+        alert('Thank you for sharing your experience!!');
+      } else {
+        alert('Failed to add your experience!! Please try after sometime.');
+      }
     }));
   }
 }

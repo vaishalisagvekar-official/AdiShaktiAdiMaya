@@ -51,12 +51,12 @@ export class ExperienceListComponent implements OnInit {
   ngOnInit() {
     console.log(this.sessionStorageService.isAdmin());
     
-    this.experienceListService.getAllItems().subscribe((response) => {
+    this.experienceListService.getAllItems().subscribe((response: any) => {
       console.log(response);
       
-      if (response) {
-        if (Array.isArray(response)) {
-          this.items = response;
+      if (response?.status == 1) {
+        if (Array.isArray(response.data)) {
+          this.items = response?.data;
           this.approvedExperiences = this.items.filter((experience:any)=> experience.isApproved)
           this.nonApprovedExperiences = this.items.filter((experience:any)=> !experience.isApproved)
           console.log(this.nonApprovedExperiences);
@@ -67,9 +67,13 @@ export class ExperienceListComponent implements OnInit {
   }
 
   approveItem(itemId: string) {
-    this.experienceListService.approveItemById(itemId).subscribe((response) => {
-      if(response.item.isApproved == true){
-        this.isShow == false
+    this.experienceListService.approveItemById(itemId).subscribe((response: any) => {
+      if (response?.status == 1) {
+        if(response?.data?.isApproved == true){
+          this.isShow == false
+        }
+      } else {
+        alert("Failed to approve experience. Please try after sometime")
       }
     });
   }

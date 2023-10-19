@@ -1,5 +1,5 @@
 <div class="container pt-4" >
-  <div class="container-fluid" *ngIf="!sessionStorageService.isAdmin(); else isAdminBlock">
+  <div class="container-fluid pl-0 pr-0" *ngIf="!sessionStorageService.isAdmin(); else isAdminBlock">
     <p-carousel
     [value]="approvedExperiences"
     [responsiveOptions]="responsiveOptions"

@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class ExperienceListService {
   constructor(private apiService: ApiService) {}
    //get all experience list
-  getAllItems(): Observable<any[]> {
+  getAllItems(): Observable<any> {
     return this.apiService.makeGetAPI('fetchExperienceData');
   }
 

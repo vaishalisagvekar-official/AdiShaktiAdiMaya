@@ -5,6 +5,8 @@
     .container {
         width: auto;
         margin: auto 15px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 .approve {
