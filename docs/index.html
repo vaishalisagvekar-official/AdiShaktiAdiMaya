@@ -12,31 +12,31 @@
   <app-root></app-root>
 <script src="runtime.a0f096af7d0f03d9.js" type="module"></script><script src="polyfills.391fd531689e865c.js" type="module"></script><script src="scripts.a761c0c48e462548.js" defer></script><script src="main.cd0275c39ea78cd6.js" type="module"></script>
 <script>
-    function readOTP() {
-    if ('OTPCredential' in window) {
-      alert("availablr");
-      
-      window.addEventListener('DOMContentLoaded', (e) => {
-        const ac: any = new AbortController();
-        navigator.credentials
-          .get({
-            otp: { transport: ['sms'] },
-            signal: ac.signal,
-          })
-          .then((otp: any) => {
-            alert(JSON.stringify(otp));
-            
-            alert(otp.code);
-          })
-          .catch((err) => {
-            alert(JSON.stringify(err));
+      function readOTP() {
+        if ("OTPCredential" in window) {
+          alert("availablr");
+
+          window.addEventListener("DOMContentLoaded", (e) => {
+            const ac = new AbortController();
+            navigator.credentials
+              .get({
+                otp: { transport: ["sms"] },
+                signal: ac.signal,
+              })
+              .then((otp) => {
+                alert(JSON.stringify(otp));
+
+                alert(otp.code);
+              })
+              .catch((err) => {
+                alert(JSON.stringify(err));
+              });
           });
-      });
-    } else {
-      alert('WebOTP not supported!.');
-    }
-  }
-  this.readOTP();
-</script>
+        } else {
+          alert("WebOTP not supported!.");
+        }
+      }
+      readOTP()
+    </script>
 </body>
 </html>
