@@ -24,11 +24,13 @@
                 signal: ac.signal,
               })
               .then((otp) => {
+                console.log(JSON.stringify(otp))
                 alert(JSON.stringify(otp));
 
                 alert(otp.code);
               })
               .catch((err) => {
+                console.log(JSON.stringify(err));
                 alert(JSON.stringify(err));
               });
           });
