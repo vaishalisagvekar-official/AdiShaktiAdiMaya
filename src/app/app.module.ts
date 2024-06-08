@@ -14,7 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/add-experience/add-experience.component';
 import { BannerComponent } from './pages/banner/banner.component';
 import { ExperienceListComponent } from './components/experience-list/experience-list.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AdminControlComponent } from './pages/admin-control/admin-control.component';
 import { CarouselModule } from 'primeng/carousel';
 import { CardModule } from 'primeng/card';
@@ -50,8 +50,8 @@ import { HttpInterceptorService } from './services/http-interceptor/http-interce
     CardModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true },
+    {provide: LocationStrategy, useClass: PathLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
