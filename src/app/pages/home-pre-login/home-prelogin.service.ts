@@ -7,9 +7,4 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class HomePreloginService {
 
-  constructor(private apiService: ApiService) { }
-
-  getAllNews(): Observable<any> {
-    return this.apiService.makeGetAPI('getNews');
-  }
 }

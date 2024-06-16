@@ -1,0 +1,43 @@
+<div class="mx-3">
+    <div class="form-wrapper m-auto mt-4 shadow-lg p-5">
+      <h2 class="text-center heading">Add News</h2>
+      <form>
+        <div class="mb-3">
+          <label for="heading" class="form-label">Heading</label>
+          <input
+            type="text"
+            name="heading"
+            class="form-control"
+            id="heading"
+            autocomplete="off"
+            [(ngModel)]="heading"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Experience</label>
+          <textarea
+            rows="6"
+            cols="200"
+            type="text"
+            name="content"
+            class="form-control"
+            id="content"
+            autocomplete="off"
+            [(ngModel)]="content"
+            maxlength="5000"
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn primaryThemebg"
+            data-toggle="modal"
+            (click)="submit()"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

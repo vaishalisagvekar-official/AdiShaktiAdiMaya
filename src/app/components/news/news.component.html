@@ -1,0 +1,6 @@
+<div *ngIf="newsService.news.length > 0" class="news">
+    <marquee>
+        <strong>{{newsService.news[0].heading}}</strong>: &nbsp;
+        <span>{{newsService.news[0].content}}</span>
+    </marquee>
+</div>

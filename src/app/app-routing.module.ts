@@ -10,6 +10,7 @@ import { BannerComponent } from './pages/banner/banner.component';
 import { ExperienceListComponent } from './components/experience-list/experience-list.component';
 import { authGuard } from './auth/auth.guard';
 import { AdminControlComponent } from './pages/admin-control/admin-control.component';
+import { AddNewsComponent } from './pages/add-news/add-news.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,11 @@ const routes: Routes = [
     path: 'add-banner',
     component: BannerComponent,
      canActivate: [authGuard]
+  },
+  {
+    path: 'add-news',
+    component: AddNewsComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'admin-control',

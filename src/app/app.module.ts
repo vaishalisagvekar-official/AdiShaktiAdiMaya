@@ -22,6 +22,8 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { CourseComponent } from './components/course/course.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HttpInterceptorService } from './services/http-interceptor/http-interceptor.service';
+import { AddNewsComponent } from './pages/add-news/add-news.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HttpInterceptorService } from './services/http-interceptor/http-interce
     AdminControlComponent,
     CoursesComponent,
     CourseComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AddNewsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
